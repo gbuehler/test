@@ -1,2 +1,2 @@
 <?php
-echo "Good Bye REAL World!";
+echo "Good Bye World War Z!";
