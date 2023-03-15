@@ -11,7 +11,7 @@ function add_app_to_dock {
     if open -Ra "${app}"; then
         echo "$app added to the Dock."
 
-        defaults write com.apple.dock persistent-apps -array-add "<dict>
+        defaults write com.apple.dock static-apps -array-add "<dict>
                 <key>tile-data</key>
                 <dict>
                     <key>file-data</key>
