@@ -142,7 +142,7 @@ declare -a apps=(
     '/Applications/Slack.app'
     '/Applications/Google Chrome.app'
     '/Applications/VLC.app'
-    '/System/Applications/System Preferences.app'
+    '/System/Applications/System Settings.app'
 );
 
 declare -a folders=(
