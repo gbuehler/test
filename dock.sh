@@ -115,11 +115,16 @@ function clear_apps_from_dock {
     defaults delete com.apple.dock persistent-apps
 }
 
+function clear_static_apps_from_dock {
+    defaults delete com.apple.dock static-apps
+}
+
 function clear_others_from_dock {
     defaults delete com.apple.dock persistent-others
 }
 
 function clear_dock {
+    clear_static_apps_from_dock
     clear_apps_from_dock
     clear_others_from_dock
 }
@@ -137,11 +142,17 @@ function reset_dock {
     killall Dock
 }
 
+#    '/System/Applications/Utilities/Terminal.app'
+#   '/Applications/Slack.app'
+#    '/Applications/Google Chrome.app'
+#    '/Applications/VLC.app'
+#    '/System/Applications/System Settings.app'
+
+
 declare -a apps=(
-    '/System/Applications/Utilities/Terminal.app'
-    '/Applications/Slack.app'
+    '/System/Applications/Launchpad.app'
     '/Applications/Google Chrome.app'
-    '/Applications/VLC.app'
+    '/Applications/Slack.app'
     '/System/Applications/System Settings.app'
 );
 
